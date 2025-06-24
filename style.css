@@ -5,7 +5,7 @@
 body {
     margin: 0;
     display: grid;
-    grid-template-columns: 250px repeat(5, 1fr);
+    grid-template-columns: 1fr repeat(5, 1fr);
     grid-template-rows: auto auto 1fr 1fr 1fr;
     grid-template-areas: 
     "dashboard header header header header header"
@@ -139,14 +139,35 @@ body {
 /** -----------------DASHBOARD------------------------*/
 
 .dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     grid-area: dashboard;
     background-color: green;
-    align-self: stretch;
-    justify-self: stretch;
+    padding: 2rem;
 }
 
-.dashboard img {
-    display: none;
+.dashboard__item {
+    width: 100%;
+}
+
+.dashboard__item a, .dashboard__logo {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    gap: 0 1rem;
+}
+
+.dashboard__item a, .dashboard__item h3 {
+    text-decoration: none;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.dashboard__item img, .dashboard__logo img {
+    width: 20%;
 }
 
 /** -----------------CONTENIDO------------------------*/
