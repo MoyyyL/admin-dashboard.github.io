@@ -202,10 +202,10 @@ body {
     flex: 1 1 48%;
 }
 
-/*todo FIX THE OVERFLOW ON THE SIDE-BAR OF MAIN*/
 /* EXTRA CONTENT -----------------------------------------*/
 .main__lateral {
     flex: 2 1 0;
+    min-width: 0;
     display: grid;
     grid-template-rows: 50% 50%;
 }
@@ -218,25 +218,37 @@ body {
 .lateral__announcements {
     background-color: pink;
     display: flex;
+    min-width: 0;
     flex-direction: column;
     padding: 0.5rem;
     gap: 5px;
+    justify-content: center;
 }
 
 .announcements__item {
-    font-size: 1rem;
+    min-width: 0;
+    font-size: 0.85rem;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
+/*! learn how it works*/
 .announcements__item p {
-    text-overflow: ellipsis;
-    overflow: hidden;
+  display: -webkit-box;        /* contenedor flexible en WebKit */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;       /* número máximo de líneas antes de cortar */
+  line-clamp: 2;
+  overflow: hidden;            /* oculta lo que sobra */
+  /* ya no necesitas text-overflow ni white-space aquí */
 }
 
 /* TRENDING ------------------------------------------*/
 .lateral__trending {
     background-color: peru;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
 }
 
 .trending__item {
