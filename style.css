@@ -18,6 +18,7 @@ body {
     font-family: sans-serif;
 }
 
+/*todo FIX THE HEADER SIZE*/
 /** -----------------HEADER------------------------*/
 
 .head {
@@ -201,15 +202,48 @@ body {
     flex: 1 1 48%;
 }
 
+/*todo FIX THE OVERFLOW ON THE SIDE-BAR OF MAIN*/
 /* EXTRA CONTENT -----------------------------------------*/
 .main__lateral {
     flex: 2 1 0;
+    display: grid;
+    grid-template-rows: 50% 50%;
 }
 
+.main__lateral h3, .main__lateral p, .main__lateral h2 {
+    margin: 5px;
+}
+
+/* ANNOUNCEMENTS ------------------------------------------*/
 .lateral__announcements {
     background-color: pink;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    gap: 5px;
 }
 
+.announcements__item {
+    font-size: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.announcements__item p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* TRENDING ------------------------------------------*/
 .lateral__trending {
     background-color: peru;
+}
+
+.trending__item {
+    display: flex;
+    align-items: center;
+}
+
+.trending__item img, .trending__item--info {
+    flex: 1;
 }
