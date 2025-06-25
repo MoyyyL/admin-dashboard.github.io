@@ -100,6 +100,7 @@ body {
     display: flex;
     padding: 0 2rem 0rem 2rem;
     margin: 0;
+    font-size: max(1rem, 1vw);
 }
 
 .header__greeting img {
@@ -134,20 +135,22 @@ body {
 .header__buttons button {
     flex: 1;
     height: 40%;
+    padding: min(5px, 0.1vw);
     border-radius: 1.5rem;
     border: 1px solid #00000081;
-    background-color: #609df8;
+    font-size: max(0.9rem, 1.1vw);
 }
 
 /** -----------------DASHBOARD------------------------*/
 
 .dashboard {
+    grid-area: dashboard;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    grid-area: dashboard;
-    /*background-color: green;*/
+    background-color: green;
     padding: 2rem;
+    font-size: min(1vw, 2rem);
 }
 
 .dashboard__item {
@@ -181,6 +184,7 @@ body {
     /*background-color: blue;*/
 }
 
+/*todo CHANGE FONT SIZE FORM HERE*/
 /* PROYECTS ------------------------------------------*/
 .main__proyects--wrapper {
     flex: 7 3 0;
