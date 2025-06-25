@@ -85,7 +85,10 @@ body {
 
 .header__profile a {
     width: 15%;
-    height: 55%;
+    height: 7vh;
+    padding: 0;
+    padding-top: 5px;
+    margin: 0;
 }
 
 .header__profile img {
@@ -105,7 +108,7 @@ body {
 
 .header__greeting img {
     border-radius: 50%;
-    max-height: 100px;
+    height: clamp(50px, 13vh, 100px);
 }
 
 .greeting__effect {
@@ -210,6 +213,16 @@ body {
 .proyect__item {
     border: 1px solid black;
     flex: 1 1 48%;
+    padding: 15px;
+    font-size: max(1rem, 1vw);
+}
+
+.proyect__item h3 {
+    margin: 0;
+}
+
+.proyect__item p {
+    margin-top: 7px;
 }
 
 /* EXTRA CONTENT -----------------------------------------*/
@@ -231,13 +244,14 @@ body {
     min-width: 0;
     flex-direction: column;
     padding: 0.5rem;
+    padding-left: 0;
     gap: 5px;
     justify-content: center;
 }
 
 .announcements__item {
     min-width: 0;
-    font-size: 0.85rem;
+    font-size: max(0.85rem, 0.8vw);
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -259,11 +273,14 @@ body {
     flex-direction: column;
     justify-content: center;
     padding: 1rem;
+    padding-left: 0;
+
 }
 
 .trending__item {
     display: flex;
     align-items: center;
+    font-size: max(1rem, 1vw);
 }
 
 .trending__item img, .trending__item--info {
