@@ -16,6 +16,7 @@ body {
     ;
     height: 100dvh;
     font-family: sans-serif;
+    background-color: #bec3bc;
 }
 
 /*todo FIX THE HEADER SIZE*/
@@ -30,12 +31,11 @@ body {
     "greeting greeting greeting buttons buttons"
     "greeting greeting greeting buttons buttons"
     ;
-    /*background-color: purple;
-    border: 3px solid red;*/
-}
-
-.head img {
-    max-width: 100px;
+    background-color: #9ca7a9c0;
+    padding-bottom: 0.8rem;
+    box-shadow: 0px 3px 17px -7px rgba(0,0,0,0.7);
+-webkit-box-shadow: 0px 3px 17px -7px rgba(0,0,0,0.7);
+-moz-box-shadow: 0px 3px 17px -7px rgba(0,0,0,0.7);
 }
 
 /* NAV-BAR -------------------------------------*/
@@ -54,7 +54,7 @@ body {
     border-radius: 80px;
     outline: none;
     overlay: none;
-    border: 1px solid #00000081;
+    border: none;
     padding: 1rem;
 }
 
@@ -137,11 +137,15 @@ body {
 
 .header__buttons button {
     flex: 1;
-    height: 40%;
-    padding: min(5px, 0.1vw);
+    height: 50%;
+    padding: 0;
     border-radius: 1.5rem;
     border: 1px solid #00000081;
     font-size: max(0.9rem, 1.1vw);
+}
+
+.header__buttons button:hover {
+    filter: brightness(0.9);
 }
 
 /** -----------------DASHBOARD------------------------*/
@@ -151,7 +155,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background-color: green;
+    background-color: #65727a;
     padding: 2rem;
     font-size: min(1vw, 2rem);
 }
@@ -184,6 +188,7 @@ body {
 .main {
     grid-area: content;
     display: flex;
+    margin-top: 5px;
     /*background-color: blue;*/
 }
 
@@ -199,6 +204,7 @@ body {
 
 .main__proyects--wrapper h2{
     margin-top: 0;
+    margin-bottom: 0.8rem;
 }
 
 .main__proyects {
@@ -211,10 +217,12 @@ body {
 }
 
 .proyect__item {
-    border: 1px solid black;
     flex: 1 1 48%;
     padding: 15px;
-    font-size: max(1rem, 1vw);
+    font-size: clamp(14px ,1vw, 2rem);
+    background-color: #e6e8e3;
+    border-left: 5px solid orange;
+    border-radius: 8px;
 }
 
 .proyect__item h3 {
@@ -237,16 +245,24 @@ body {
     margin: 5px;
 }
 
+.lateral__announcements--wrapper, .lateral__trending--wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
 /* ANNOUNCEMENTS ------------------------------------------*/
 .lateral__announcements {
     /*background-color: pink;*/
     display: flex;
     min-width: 0;
     flex-direction: column;
-    padding: 0.5rem;
-    padding-left: 0;
+    padding: 0.5rem 0.7rem;
     gap: 5px;
     justify-content: center;
+    background-color: #e6e8e3;
+    border-radius: 5px;
 }
 
 .announcements__item {
@@ -272,9 +288,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1rem;
-    padding-left: 0;
-
+    padding: 0.5rem 0.7rem;
+    background-color: #e6e8e3;
+    border-radius: 5px;
 }
 
 .trending__item {
